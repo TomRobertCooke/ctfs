@@ -19,7 +19,7 @@
 
 ## Compilation hint:
 
-If you wish to run [compiled.c](https://github.com/TomRobertCooke/CTFs/blob/master/thm-compiled/compiled.c) and test it yourself, I'd recommend using `gcc -fpermissive compile.c`. On my system, I had issues getting `__isoc99_scanf` to compile without using `-fpermissive` to reduce the error to a warning. There's nothing to be concerned about in this case, the linker should be mapping `scanf` to `__isoc99_scanf` in the first place (assuming you're compliant with isoc99).
+If you wish to run [compiled.c](https://github.com/TomRobertCooke/CTFs/blob/master/thm-compiled/compiled.c) and test it yourself, I'd recommend using `gcc -fpermissive compile.c`. On my system, I had issues getting `__isoc99_scanf` to compile without using `-fpermissive` to reduce an error to a warning. There's nothing to be concerned about in this case, the linker should be mapping `scanf` to `__isoc99_scanf` in the first place assuming your gcc is up to date.
 
 <br>
 
@@ -30,6 +30,8 @@ The first step that I could easily do here is execute the binary on a virtual ma
 <img width="446" height="91" alt="first execute" src="https://github.com/user-attachments/assets/1f5b1579-4dcb-4838-b81d-935fee6f68e3" />
 
 All it seemed to do is ask for the password, which I didn't have, so I can't go much further with running the binary until I figured that out.
+
+<br>
 
 <br>
 
@@ -49,9 +51,15 @@ Most of this isn't very useful to me, but it's good to know that file is a 64 bi
 
 <br>
 
+<br>
+
 During this process I also learned about the *"magic byte"* of a file. This refers to the hexadecimal signature in the first byte of a file indicating its type (e.g. a PDF file would start with `25 50 44 46 2D` or "%PDF-"). Like our executable here, any file can have its extension changed, but this signature should remain the same. I was able to use `xxd -l 8` on this binary to get a hexdump of the first byte, which indicated that this was an ELF executable.
 
 <img width="557" height="81" alt="signature" src="https://github.com/user-attachments/assets/ab0d15a2-a5f4-4c4e-a3bf-e8c9005dd490" />
+
+<br>
+
+<br>
 
 <br>
 
@@ -64,6 +72,8 @@ At this point it was time to open the executable in a decompiler of some sort. I
 <img width="581" height="353" alt="ghidra" src="https://github.com/user-attachments/assets/fe39d585-0dc1-4ab9-a2dd-5f11d8f90d4a" />
 
 It looks like the strings "\_\_dso\_handle" and "\_init" are more important than they initially appeared. The code prompts us for the password as expected, and then reads our input with `__isoc99_scanf` using the format `"DoYouEven%sCTF"`, and putting our input into `local_28`. The logic afterward seems to check if our inputted string is exactly equal to `"__dso_handle"` and immediately prints `"Try Again!"`. The more important section, though, is where it checks if the input string is equal to `"_init"` and prints `"Correct!"` if so.
+
+<br>
 
 <br>
 
@@ -91,6 +101,8 @@ int main(void) {
   return 0;
 }
 ```
+
+<br>
 
 <br>
 

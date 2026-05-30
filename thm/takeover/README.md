@@ -1,4 +1,4 @@
-# [TryHackMe - TakeOver](ctf-https://tryhackme.com/room/takeover)
+# [TryHackMe - TakeOver](https://tryhackme.com/room/takeover)
 - Author: [Thomas Cooke](http://github.com/tomrobertcooke)
 
 <br>
@@ -23,12 +23,6 @@
 
 ## Writeup
 
-<br>
-
-<br>
-
-<br>
-
 Even though this is a subdomain challenge, I did some basic enumeration for completion's sake. After adding `futurevera.thm` to my `/etc/hosts` file, I went to visit the site in a web browser. The homepage doesn't have too much going on here.
 
 <img width="1191" height="711" alt="homepage" src="https://github.com/user-attachments/assets/2cc2a830-b02e-4f6d-b492-c0ad46d5a274" />
@@ -41,7 +35,7 @@ Even though this is a subdomain challenge, I did some basic enumeration for comp
 
 After that I did a quick nmap scan to see what services they might be running. Ports `80` and `443` are pretty much what you'd expect, and they're running `ssh` on the standard port as well. It's interesting that their certificate is expired. More certificate issues came up later, so it turned out to be important to keep that in mind.
 
-image-<img width="1280" height="580" alt="nmap" src="https://github.com/user-attachments/assets/cdcb21db-ca4a-4499-821a-bf88996d2f9b" /
+<img width="1280" height="580" alt="nmap" src="https://github.com/user-attachments/assets/cdcb21db-ca4a-4499-821a-bf88996d2f9b" />
 
 <br>
 
@@ -51,7 +45,7 @@ image-<img width="1280" height="580" alt="nmap" src="https://github.com/user-att
 
 It seemed appropriate to brute force some directories with `gobuster` and see if any other information could be easily obtained.
 
-image-<img width="1280" height="557" alt="dirs" src="https://github.com/user-attachments/assets/e2ea9548-b92a-4782-abad-d75058f0c556" />
+<img width="1280" height="557" alt="dirs" src="https://github.com/user-attachments/assets/e2ea9548-b92a-4782-abad-d75058f0c556" />
 
 I explored these, and while they were all viewable in a web browser, nothing really stuck out or looked particularly vulnerable at first glance
 
@@ -63,7 +57,7 @@ I explored these, and while they were all viewable in a web browser, nothing rea
 
 Then it was time to start looking for subdomains. I decided to use `wfuzz` to bruteforce them with a wordlist. It granted some useful results.
 
-image-<img width="1280" height="450" alt="wfuzz" src="https://github.com/user-attachments/assets/8f392f1d-e254-44bf-b59d-077725121a02" />
+<img width="1280" height="450" alt="wfuzz" src="https://github.com/user-attachments/assets/8f392f1d-e254-44bf-b59d-077725121a02" />
 
 The next natural step was to add `support.futurevera.thm` and `blog.futurevera.thm` to my `/etc/hosts` file and investigate them as well.
 
@@ -89,7 +83,7 @@ Before even looking at the actual site, `support.futurevera.thm`'s certificate c
 
 When I visited this new hidden subdomain in my web browser, the error page and URL both contained the flag. Mission accomplished!
 
-image-<img width="1200" height="718" alt="flag" src="https://github.com/user-attachments/assets/088ac639-1574-4997-a2a9-043fa0149413" />
+<img width="1200" height="718" alt="flag" src="https://github.com/user-attachments/assets/088ac639-1574-4997-a2a9-043fa0149413" />
 
 <br>
 

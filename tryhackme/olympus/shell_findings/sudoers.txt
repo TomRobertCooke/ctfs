@@ -1,0 +1,5 @@
+root@ip-10-67-130-19:/etc/sudoers.d# cat 90-cloud-init-users
+# Created by cloud-init v. 24.4.1-0ubuntu0~20.04.2 on Wed, 03 Jun 2026 22:59:53 +0000
+
+# User rules for ubuntu
+ubuntu ALL=(ALL) NOPASSWD:ALL

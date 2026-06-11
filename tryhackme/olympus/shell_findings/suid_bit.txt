@@ -1,0 +1,50 @@
+www-data@ip-10-64-165-182:/$ finfind / -type f -perm -4000 2>/dev/null
+find / -type f -perm -4000 2>/dev/null
+/usr/lib/snapd/snap-confine
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/openssh/ssh-keysign
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/bin/cputils
+/usr/bin/sudo
+/usr/bin/mount
+/usr/bin/gpasswd
+/usr/bin/at
+/usr/bin/pkexec
+/usr/bin/su
+/usr/bin/chfn
+/usr/bin/chsh
+/usr/bin/passwd
+/usr/bin/fusermount
+/usr/bin/umount
+/usr/bin/newgrp
+/snap/snapd/23771/usr/lib/snapd/snap-confine
+/snap/snapd/24505/usr/lib/snapd/snap-confine
+/snap/core20/2571/usr/bin/chfn
+/snap/core20/2571/usr/bin/chsh
+/snap/core20/2571/usr/bin/gpasswd
+/snap/core20/2571/usr/bin/mount
+/snap/core20/2571/usr/bin/newgrp
+/snap/core20/2571/usr/bin/passwd
+/snap/core20/2571/usr/bin/su
+/snap/core20/2571/usr/bin/sudo
+/snap/core20/2571/usr/bin/umount
+/snap/core20/2571/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/snap/core20/2571/usr/lib/openssh/ssh-keysign
+/snap/core20/1518/usr/bin/chfn
+/snap/core20/1518/usr/bin/chsh
+/snap/core20/1518/usr/bin/gpasswd
+/snap/core20/1518/usr/bin/mount
+/snap/core20/1518/usr/bin/newgrp
+/snap/core20/1518/usr/bin/passwd
+/snap/core20/1518/usr/bin/su
+/snap/core20/1518/usr/bin/sudo
+/snap/core20/1518/usr/bin/umount
+/snap/core20/1518/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/snap/core20/1518/usr/lib/openssh/ssh-keysign
+
+
+
+www-data@ip-10-64-165-182:/$ ls -l /usr/bin/cputils
+ls -l /usr/bin/cputils
+-rwsr-xr-x 1 zeus zeus 17728 Apr 18  2022 /usr/bin/cputils

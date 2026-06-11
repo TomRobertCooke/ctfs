@@ -1,0 +1,27 @@
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://olympus.thm
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/dirb/wordlists/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2K/.hta                 (Status: 403) [Size: 276]
+[2K/.htaccess            (Status: 403) [Size: 276]
+[2K/.htpasswd            (Status: 403) [Size: 276]
+[2K/~webmaster           (Status: 301) [Size: 315] [--> http://olympus.thm/~webmaster/]
+[2K/index.php            (Status: 200) [Size: 1948]
+[2K/javascript           (Status: 301) [Size: 315] [--> http://olympus.thm/javascript/]
+[2K/phpmyadmin           (Status: 403) [Size: 276]
+[2K/server-status        (Status: 403) [Size: 276]
+[2K/static               (Status: 301) [Size: 311] [--> http://olympus.thm/static/]
+
+===============================================================
+Finished
+===============================================================

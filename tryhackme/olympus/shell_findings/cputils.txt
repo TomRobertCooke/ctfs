@@ -1,0 +1,12 @@
+www-data@ip-10-64-165-182:/tmp$ cputils
+  ____ ____        _   _ _
+ / ___|  _ \ _   _| |_(_) |___
+| |   | |_) | | | | __| | / __|
+| |___|  __/| |_| | |_| | \__ \
+ \____|_|    \__,_|\__|_|_|___/
+
+Enter the Name of Source File: /home/zeus/.ssh/id_rsa
+
+Enter the Name of Target File: /tmp/copypaste/id_rsa
+
+File copied successfully.

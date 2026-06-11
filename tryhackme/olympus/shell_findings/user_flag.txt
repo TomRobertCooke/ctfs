@@ -1,0 +1,20 @@
+www-data@ip-10-64-165-182:/home/zeus$ ls -la
+ls -la
+total 48
+drwxr-xr-x 7 zeus zeus 4096 Apr 19  2022 .
+drwxr-xr-x 4 root root 4096 Jun  3 13:13 ..
+lrwxrwxrwx 1 root root    9 Mar 23  2022 .bash_history -> /dev/null
+-rw-r--r-- 1 zeus zeus  220 Feb 25  2020 .bash_logout
+-rw-r--r-- 1 zeus zeus 3771 Feb 25  2020 .bashrc
+drwx------ 2 zeus zeus 4096 Mar 22  2022 .cache
+drwx------ 3 zeus zeus 4096 Apr 14  2022 .gnupg
+drwxrwxr-x 3 zeus zeus 4096 Mar 23  2022 .local
+-rw-r--r-- 1 zeus zeus  807 Feb 25  2020 .profile
+drwx------ 2 zeus zeus 4096 Apr 14  2022 .ssh
+-rw-r--r-- 1 zeus zeus    0 Mar 22  2022 .sudo_as_admin_successful
+drwx------ 3 zeus zeus 4096 Apr 14  2022 snap
+-rw-rw-r-- 1 zeus zeus   34 Mar 23  2022 user.flag
+-r--r--r-- 1 zeus zeus  199 Apr 15  2022 zeus.txt
+www-data@ip-10-64-165-182:/home/zeus$ cat user.flag
+cat user.flag
+****{***************************}

@@ -1,0 +1,22 @@
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://chat.olympus.thm
+[+] Method:                  GET
+[+] Threads:                 64
+[+] Wordlist:                /usr/share/dirbuster/wordlists/directory-list-1.0.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Follow Redirect:         true
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2K/static               (Status: 200) [Size: 1761]
+[2K/phpmyadmin           (Status: 403) [Size: 281]
+[2K/uploads              (Status: 200) [Size: 0]
+
+===============================================================
+Finished
+===============================================================

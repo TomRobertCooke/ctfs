@@ -1,0 +1,27 @@
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://chat.olympus.thm/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2K/.htaccess            (Status: 403) [Size: 281]
+[2K/.hta                 (Status: 403) [Size: 281]
+[2K/.htpasswd            (Status: 403) [Size: 281]
+[2K/index.php            (Status: 302) [Size: 0] [--> login.php]
+[2K/javascript           (Status: 301) [Size: 325] [--> http://chat.olympus.thm/javascript/]
+[2K/phpmyadmin           (Status: 403) [Size: 281]
+[2K/server-status        (Status: 403) [Size: 281]
+[2K/static               (Status: 301) [Size: 321] [--> http://chat.olympus.thm/static/]
+[2K/uploads              (Status: 301) [Size: 322] [--> http://chat.olympus.thm/uploads/]
+
+===============================================================
+Finished
+===============================================================
